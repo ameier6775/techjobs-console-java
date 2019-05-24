@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+import static org.launchcode.techjobs.console.JobData.findByColumnAndValue;
+
 /**
  * Created by LaunchCode
  */
@@ -65,7 +67,7 @@ public class TechJobs {
                 if (searchField.equals("all")) {
                     printJobs(JobData.findByValue(searchTerm));
                 } else {
-                    printJobs(JobData.findByValue(searchTerm));
+                    printJobs(JobData.findByColumnAndValue(searchField, searchTerm));
                 }
             }
         }
